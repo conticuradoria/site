@@ -789,14 +789,45 @@ function editAnswers() {
   showStep(currentStep || 7);
 }
 
-function submitForm() {
-  document.getElementById('review').style.display = 'none';
-  document.getElementById('success').style.display = 'block';
-  document.getElementById('progressFill').style.width = '100%';
-  window.scrollTo({top:0,behavior:'smooth'});
+async function submitForm() {
+  const btn = document.querySelector('#review .btn-next');
+  btn.textContent = 'Enviando…';
+  btn.disabled = true;
 
-  // Log to console for integration
-  console.log('Candidatura Conti:', answers);
+  const payload = {
+    _subject: `Nova candidatura — ${answers.nome || ''} · ${answers.marca || ''}`,
+    _replyto: answers.email || '',
+    nome: answers.nome || '—',
+    marca: answers.marca || '—',
+    email: answers.email || '—',
+    momento: answers.momento || '—',
+    travando: answers.travando || '—',
+    tentativa: answers.tentativa || '—',
+    espera: answers.espera || '—',
+    abertura: answers.abertura || '—',
+    extra: answers.extra || 'Não informado'
+  };
+
+  try {
+    const res = await fetch('https://formspree.io/f/mzdkpdkk', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+      body: JSON.stringify(payload)
+    });
+
+    if (res.ok) {
+      document.getElementById('review').style.display = 'none';
+      document.getElementById('success').style.display = 'block';
+      document.getElementById('progressFill').style.width = '100%';
+      window.scrollTo({top:0,behavior:'smooth'});
+    } else {
+      throw new Error('Erro no envio');
+    }
+  } catch (e) {
+    btn.textContent = 'Enviar candidatura →';
+    btn.disabled = false;
+    alert('Houve um problema ao enviar. Tente novamente ou entre em contato por contato.conticuradoria@gmail.com');
+  }
 }
 
 // auto-resize textareas
