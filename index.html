@@ -1149,7 +1149,7 @@ footer{
   <div class="nav-top">
     <span class="nav-issue">Conti · Estratégia e Arquitetura de Marcas</span>
     <!-- FIX 1: href corrigido — estava "https://wa.me/...="#diagnose" (atributo quebrado) -->
-    <a href="https://form.respondi.app/2LccHDzU" class="nav-cta-sm" target="_blank">Agendar diagnose →</a>
+    <a href="https://form.respondi.app/2LccHDzU" target="_blank" class="nav-cta-sm">Agendar diagnose →</a>
   </div>
   <div class="nav-bottom">
     <a href="#pos" class="nav-item">Sobre</a>
@@ -1176,7 +1176,7 @@ footer{
       </p>
     </div>
     <div class="hero-cta-block">
-      <a href="https://form.respondi.app/2LccHDzU" class="btn-p" class="hero-cta">Descobrir o potencial da sua marca</a>
+      <a href="https://form.respondi.app/2LccHDzU" target="_blank" class="hero-cta">Descobrir o potencial da sua marca</a>
       <span class="hero-cta-note">Diagnose Conti · R$4.500</span>
     </div>
   </div>
@@ -1264,7 +1264,7 @@ footer{
     <div class="sec-head r">
       <span class="sec-num">01</span>
       <div class="sec-rule"></div>
-      <span class="sec-label">A Conti</span>
+      <span class="sec-label">O estúdio</span>
     </div>
     <div class="pos-layout">
       <div class="pos-sidebar r">
@@ -1345,7 +1345,7 @@ footer{
           <div class="price-meta">Sessão única<br>Vagas limitadas por mês</div>
         </div>
         <div class="r d3" style="display:flex;gap:12px;flex-wrap:wrap">
-          <a href="https://form.respondi.app/2LccHDzU" class="btn-p">Agendar minha sessão</a>
+          <a href="https://form.respondi.app/2LccHDzU" target="_blank" class="btn-p">Agendar minha sessão</a>
           <a href="#como" class="btn-g">Como funciona</a>
         </div>
       </div>
@@ -1601,7 +1601,7 @@ footer{
         <h2 class="fim-h2 r d1">Duas horas.<br><strong>Um mapeamento.</strong><br>Uma direção.</h2>
         <p class="fim-body r d2">O passo mais curto entre onde sua marca está e onde ela poderia estar. A diagnose revela o potencial que existe antes de qualquer mudança.</p>
         <div class="fim-btns r d3">
-          <a href="https://form.respondi.app/2LccHDzU" class="btn-p">Agendar diagnose</a>
+          <a href="https://form.respondi.app/2LccHDzU" target="_blank" class="btn-p">Agendar diagnose</a>
           <a href="https://wa.me/5511977079874" class="btn-g">Falar sobre um projeto</a>
         </div>
       </div>
@@ -1649,7 +1649,7 @@ footer{
     <div class="ft-div"></div>
     <div class="ft-cell">
       <span class="ft-label">Contato</span>
-      <p class="ft-text"><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="177478796376637839747879637e746265767378657e7657707a767e7b3974787a">[email&#160;protected]</a><br>Minas Gerais · Brasil</p>
+      <p class="ft-text">contato.conticuradoria@gmail.com<br>Minas Gerais · Brasil</p>
     </div>
   </div>
   <div class="footer-bottom">
@@ -1658,7 +1658,7 @@ footer{
   </div>
 </footer>
 
-<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+<script>
 const c=document.getElementById('c'),cr=document.getElementById('cr');
 let mx=0,my=0,rx=0,ry=0;
 document.addEventListener('mousemove',e=>{
@@ -1694,4 +1694,13 @@ document.querySelectorAll('a[href^="#"]').forEach(a=>{
   });
 });
 
-document.querySelector('.email-btn').addEventListener(
+document.querySelector('.email-btn').addEventListener('click',()=>{
+  const i=document.querySelector('.email-in');
+  if(i.value.includes('@')){
+    i.value='';i.placeholder='Anotado. Até breve.';
+    setTimeout(()=>i.placeholder='seu@email.com',3000);
+  }
+});
+</script>
+</body>
+</html>
