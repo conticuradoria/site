@@ -1149,7 +1149,7 @@ footer{
   <div class="nav-top">
     <span class="nav-issue">Conti · Estratégia e Arquitetura de Marcas</span>
     <!-- FIX 1: href corrigido — estava "https://wa.me/...="#diagnose" (atributo quebrado) -->
-    <a href="candidatura.html" class="nav-cta-sm">Agendar diagnose →</a>
+    <a href="https://form.respondi.app/2LccHDzU" class="nav-cta-sm" target="_blank">Agendar diagnose →</a>
   </div>
   <div class="nav-bottom">
     <a href="#pos" class="nav-item">Sobre</a>
@@ -1649,7 +1649,7 @@ footer{
     <div class="ft-div"></div>
     <div class="ft-cell">
       <span class="ft-label">Contato</span>
-      <p class="ft-text">contato.conticuradoria@gmail.com<br>Minas Gerais · Brasil</p>
+      <p class="ft-text"><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="177478796376637839747879637e746265767378657e7657707a767e7b3974787a">[email&#160;protected]</a><br>Minas Gerais · Brasil</p>
     </div>
   </div>
   <div class="footer-bottom">
@@ -1658,7 +1658,7 @@ footer{
   </div>
 </footer>
 
-<script>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
 const c=document.getElementById('c'),cr=document.getElementById('cr');
 let mx=0,my=0,rx=0,ry=0;
 document.addEventListener('mousemove',e=>{
@@ -1694,13 +1694,4 @@ document.querySelectorAll('a[href^="#"]').forEach(a=>{
   });
 });
 
-document.querySelector('.email-btn').addEventListener('click',()=>{
-  const i=document.querySelector('.email-in');
-  if(i.value.includes('@')){
-    i.value='';i.placeholder='Anotado. Até breve.';
-    setTimeout(()=>i.placeholder='seu@email.com',3000);
-  }
-});
-</script>
-</body>
-</html>
+document.querySelector('.email-btn').addEventListener(
