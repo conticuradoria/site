@@ -794,25 +794,24 @@ async function submitForm() {
   btn.textContent = 'Enviando…';
   btn.disabled = true;
 
-  const payload = {
-    _subject: `Nova candidatura — ${answers.nome || ''} · ${answers.marca || ''}`,
-    _replyto: answers.email || '',
-    nome: answers.nome || '—',
-    marca: answers.marca || '—',
-    email: answers.email || '—',
-    momento: answers.momento || '—',
-    travando: answers.travando || '—',
-    tentativa: answers.tentativa || '—',
-    espera: answers.espera || '—',
-    abertura: answers.abertura || '—',
-    extra: answers.extra || 'Não informado'
-  };
+  const data = new FormData();
+  data.append('_subject', `Nova candidatura — ${answers.nome || ''} · ${answers.marca || ''}`);
+  data.append('_replyto', answers.email || '');
+  data.append('Nome', answers.nome || '—');
+  data.append('Marca', answers.marca || '—');
+  data.append('Email', answers.email || '—');
+  data.append('Momento atual', answers.momento || '—');
+  data.append('O que está travando', answers.travando || '—');
+  data.append('Tentativas anteriores', answers.tentativa || '—');
+  data.append('O que espera da sessão', answers.espera || '—');
+  data.append('Abertura para feedback', answers.abertura || '—');
+  data.append('Contexto adicional', answers.extra || 'Não informado');
 
   try {
     const res = await fetch('https://formspree.io/f/mzdkpdkk', {
       method: 'POST',
-      headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
-      body: JSON.stringify(payload)
+      body: data,
+      headers: { 'Accept': 'application/json' }
     });
 
     if (res.ok) {
@@ -821,6 +820,8 @@ async function submitForm() {
       document.getElementById('progressFill').style.width = '100%';
       window.scrollTo({top:0,behavior:'smooth'});
     } else {
+      const json = await res.json();
+      console.error('Formspree error:', json);
       throw new Error('Erro no envio');
     }
   } catch (e) {
