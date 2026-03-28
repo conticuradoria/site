@@ -935,7 +935,7 @@ footer{
   text-transform:uppercase;color:var(--paper);
 }
 .ft-sub{
-  font-family:'DM Mono',monospace;
+  font-family:'Playfair Display',serif;
   font-size:8px;letter-spacing:3px;text-transform:uppercase;
   color:var(--mist);margin-top:4px;display:block;
 }
@@ -1137,6 +1137,266 @@ footer{
 }
   
 /* ── FIM FASE ZERO ──────────────────────────── */
+
+/* ══════════════════════════════════
+   IDENTIFICAÇÃO
+══════════════════════════════════ */
+#identificacao {
+  background: var(--bg2);
+}
+.ident-layout {
+  display: grid;
+  grid-template-columns: 1fr 1px 1fr;
+  gap: 0;
+}
+.ident-left {
+  padding-right: 56px;
+}
+.ident-intro {
+  font-family: 'Libre Baskerville', serif;
+  font-size: 17px;
+  line-height: 1.85;
+  color: var(--warm);
+  margin-bottom: 36px;
+  font-style: italic;
+}
+.ident-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  margin-bottom: 40px;
+}
+.ident-item {
+  display: grid;
+  grid-template-columns: 24px 1fr;
+  gap: 16px;
+  padding: 16px 0;
+  border-bottom: 1px solid var(--line);
+  align-items: start;
+}
+.ident-dot {
+  width: 6px;
+  height: 6px;
+  background: var(--amber);
+  border-radius: 50%;
+  margin-top: 8px;
+  flex-shrink: 0;
+}
+.ident-text {
+  font-family: 'Libre Baskerville', serif;
+  font-size: 15px;
+  line-height: 1.7;
+  color: var(--warm);
+}
+.ident-conclusion {
+  background: var(--amber-pale);
+  border-left: 2px solid var(--amber);
+  padding: 24px 28px;
+  margin-top: 8px;
+}
+.ident-conclusion p {
+  font-family: 'Libre Baskerville', serif;
+  font-size: 15px;
+  line-height: 1.75;
+  color: var(--paper);
+  font-style: italic;
+}
+.ident-conclusion em {
+  color: var(--amber);
+  font-style: italic;
+}
+.ident-div { background: var(--rule); }
+.ident-right {
+  padding-left: 56px;
+}
+/* consequência */
+.conseq-kicker {
+  display: inline-block;
+  font-family: 'DM Mono', monospace;
+  font-size: 8px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  background: var(--terra);
+  color: var(--paper);
+  padding: 5px 12px;
+  margin-bottom: 24px;
+}
+.conseq-h3 {
+  font-family: 'Libre Baskerville', serif;
+  font-size: clamp(22px, 2.6vw, 34px);
+  font-weight: 700;
+  line-height: 1.15;
+  letter-spacing: -0.3px;
+  color: var(--paper);
+  margin-bottom: 20px;
+}
+.conseq-h3 em { font-style: italic; color: var(--amber); }
+.conseq-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  margin-bottom: 32px;
+}
+.conseq-item {
+  display: grid;
+  grid-template-columns: 24px 1fr;
+  gap: 14px;
+  padding: 13px 0;
+  border-bottom: 1px solid var(--line);
+  align-items: start;
+}
+.conseq-dash {
+  font-family: 'DM Mono', monospace;
+  font-size: 10px;
+  color: var(--terra-lt);
+  padding-top: 4px;
+}
+.conseq-text {
+  font-family: 'Libre Baskerville', serif;
+  font-size: 14px;
+  line-height: 1.7;
+  color: var(--warm);
+}
+.conseq-verdict {
+  font-family: 'Libre Baskerville', serif;
+  font-size: 17px;
+  font-style: italic;
+  color: var(--paper);
+  border-top: 2px solid var(--terra);
+  padding-top: 20px;
+  margin-bottom: 40px;
+  line-height: 1.5;
+}
+.conseq-gains-label {
+  font-family: 'DM Mono', monospace;
+  font-size: 8px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--amber);
+  padding-bottom: 14px;
+  border-bottom: 2px solid var(--amber);
+  margin-bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.gain-item {
+  display: grid;
+  grid-template-columns: 24px 1fr;
+  gap: 14px;
+  padding: 14px 0;
+  border-bottom: 1px solid var(--line);
+  align-items: start;
+}
+.gain-n {
+  font-family: 'DM Mono', monospace;
+  font-size: 9px;
+  color: var(--amber);
+  padding-top: 3px;
+}
+.gain-text {
+  font-family: 'Libre Baskerville', serif;
+  font-size: 14px;
+  line-height: 1.7;
+  color: var(--warm);
+}
+
+/* ══════════════════════════════════
+   CTA INTERMEDIÁRIO — pronto pra começar
+══════════════════════════════════ */
+#comeca {
+  background: var(--bg3);
+  position: relative;
+  overflow: hidden;
+}
+#comeca::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, var(--amber), transparent);
+  opacity: .5;
+}
+.comeca-layout {
+  display: grid;
+  grid-template-columns: 1fr 1px 1fr;
+  gap: 0;
+  align-items: center;
+}
+.comeca-left {
+  padding-right: 56px;
+}
+.comeca-eyebrow {
+  font-family: 'DM Mono', monospace;
+  font-size: 8px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--amber);
+  display: block;
+  margin-bottom: 20px;
+}
+.comeca-h2 {
+  font-family: 'Libre Baskerville', serif;
+  font-size: clamp(30px, 3.5vw, 50px);
+  font-weight: 700;
+  line-height: 1.05;
+  letter-spacing: -.5px;
+  color: var(--paper);
+  margin-bottom: 20px;
+}
+.comeca-h2 em { font-style: italic; color: var(--amber); }
+.comeca-body {
+  font-family: 'Libre Baskerville', serif;
+  font-size: 15px;
+  line-height: 1.85;
+  color: var(--warm);
+  margin-bottom: 32px;
+  font-style: italic;
+}
+.comeca-btns { display: flex; gap: 12px; flex-wrap: wrap; }
+.comeca-div { background: var(--rule); }
+.comeca-right {
+  padding-left: 56px;
+}
+.comeca-aside-label {
+  font-family: 'DM Mono', monospace;
+  font-size: 8px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--mist);
+  padding-bottom: 14px;
+  border-bottom: 1px solid var(--rule);
+  margin-bottom: 0;
+}
+.comeca-row {
+  display: grid;
+  grid-template-columns: 28px 1fr;
+  gap: 14px;
+  padding: 16px 0;
+  border-bottom: 1px solid var(--line);
+  align-items: start;
+}
+.cr-n {
+  font-family: 'DM Mono', monospace;
+  font-size: 9px;
+  color: var(--amber);
+  padding-top: 2px;
+}
+.cr-text {
+  font-family: 'Libre Baskerville', serif;
+  font-size: 13px;
+  line-height: 1.7;
+  color: var(--warm);
+}
+.cr-text strong { color: var(--paper); font-weight: 700; }
+
+@media (max-width: 768px) {
+  .ident-layout,
+  .comeca-layout { grid-template-columns: 1fr; }
+  .ident-left, .ident-right,
+  .comeca-left, .comeca-right { padding: 0; }
+  .ident-div, .comeca-div { display: none; }
+}
 </style>
 </head>
 <body>
@@ -1169,15 +1429,15 @@ footer{
         Toda marca tem<br>
         <em>mais do que</em><br>
         comunica.
-        <span class="sub">Mapeamos esse potencial.</span>
+        <span class="sub">O problema é que a maioria opera sem direção estratégica.</span>
       </h1>
       <p class="hero-body">
-        Mapeamos o potencial de marcas e negócios — e direcionamos a travessia para alcançá-lo através da direção estratégica e criativa.
+        Antes de investir em marketing ou redesign, descubra o que realmente está limitando o crescimento da sua marca. Mapeamos o potencial de marcas e negócios — e direcionamos a travessia para alcançá-lo através da direção estratégica e criativa.
       </p>
     </div>
     <div class="hero-cta-block">
-      <a href="https://form.respondi.app/2LccHDzU" target="_blank" class="hero-cta">Descobrir o potencial da sua marca</a>
-      <span class="hero-cta-note">Diagnose Conti · R$4.500</span>
+      <a href="https://form.respondi.app/2LccHDzU" target="_blank" class="hero-cta">Aplicar para Diagnose</a>
+      <span class="hero-cta-note">Método Diagnose Conti · R$4.500</span>
     </div>
   </div>
 
@@ -1192,7 +1452,7 @@ footer{
     </div>
     <div class="index-item">
       <span class="idx-n">02</span>
-      <span class="idx-title">Diagnose Conti — mapeamento de potencial</span>
+      <span class="idx-title">Método Diagnose Conti — mapeamento de potencial</span>
       <span class="idx-tag">Método</span>
     </div>
     <div class="index-item">
@@ -1207,7 +1467,7 @@ footer{
     </div>
     <div class="index-item">
       <span class="idx-n">05</span>
-      <span class="idx-title">Licença Diagnose — para consultores</span>
+      <span class="idx-title">Licença Diagnose Conti — para consultores</span>
       <span class="idx-tag">Parceria</span>
     </div>
   </div>
@@ -1257,6 +1517,104 @@ footer{
     <div class="ticker-item">Identidade Visual</div>
   </div>
 </div>
+
+<!-- ══ IDENTIFICAÇÃO ═════════════════ -->
+<section id="identificacao">
+  <div class="wrap">
+    <div class="sec-head r">
+      <span class="sec-num">00</span>
+      <div class="sec-rule"></div>
+      <span class="sec-label">Isso soa familiar?</span>
+    </div>
+    <div class="ident-layout">
+      <div class="ident-left">
+        <p class="ident-intro r">Marcas que normalmente chegam na Conti têm histórias parecidas.</p>
+        <div class="ident-list">
+          <div class="ident-item r">
+            <div class="ident-dot"></div>
+            <div class="ident-text">Cresceram, mas perderam clareza de posicionamento no caminho</div>
+          </div>
+          <div class="ident-item r d1">
+            <div class="ident-dot"></div>
+            <div class="ident-text">Têm boa entrega, mas comunicação que não reflete o real valor</div>
+          </div>
+          <div class="ident-item r d2">
+            <div class="ident-dot"></div>
+            <div class="ident-text">Já investiram em marketing — sem o retorno que esperavam</div>
+          </div>
+          <div class="ident-item r d3">
+            <div class="ident-dot"></div>
+            <div class="ident-text">Sentem que poderiam cobrar mais, mas não sabem como justificar</div>
+          </div>
+          <div class="ident-item r d4">
+            <div class="ident-dot"></div>
+            <div class="ident-text">Dependem do fundador para vender — e isso está travando o crescimento</div>
+          </div>
+        </div>
+        <div class="ident-conclusion r">
+          <p>Se você reconheceu pelo menos <em>dois desses sinais</em>, a Diagnose provavelmente já faz sentido para você.</p>
+        </div>
+      </div>
+
+      <div class="ident-div"></div>
+
+      <div class="ident-right">
+        <div class="conseq-kicker r">O risco de pular essa etapa</div>
+        <h3 class="conseq-h3 r d1">Sem diagnóstico, a maioria das marcas<br><em>continua no mesmo lugar.</em></h3>
+        <div class="conseq-list r d2">
+          <div class="conseq-item">
+            <div class="conseq-dash">—</div>
+            <div class="conseq-text">Reposiciona várias vezes sem chegar a uma direção real</div>
+          </div>
+          <div class="conseq-item">
+            <div class="conseq-dash">—</div>
+            <div class="conseq-text">Refaz identidade visual sem resolver o que está embaixo</div>
+          </div>
+          <div class="conseq-item">
+            <div class="conseq-dash">—</div>
+            <div class="conseq-text">Contrata marketing sem base estratégica — e paga para descobrir que não funciona</div>
+          </div>
+          <div class="conseq-item">
+            <div class="conseq-dash">—</div>
+            <div class="conseq-text">Perde tempo testando narrativas que nunca colam</div>
+          </div>
+          <div class="conseq-item">
+            <div class="conseq-dash">—</div>
+            <div class="conseq-text">Cresce abaixo do potencial real que já existe na marca</div>
+          </div>
+        </div>
+        <div class="conseq-verdict r d3">Direção errada custa mais do que direção cara.</div>
+
+        <div class="conseq-gains-label r d3">
+          <span>O que você sai tendo clareza</span>
+          <span style="color:var(--mist)">Pós-diagnose</span>
+        </div>
+        <div class="r d4">
+          <div class="gain-item">
+            <div class="gain-n">01</div>
+            <div class="gain-text">Qual posição sua marca pode ocupar com menos resistência</div>
+          </div>
+          <div class="gain-item">
+            <div class="gain-n">02</div>
+            <div class="gain-text">Onde está perdendo força — e por quê</div>
+          </div>
+          <div class="gain-item">
+            <div class="gain-n">03</div>
+            <div class="gain-text">Qual movimento gera mais crescimento agora</div>
+          </div>
+          <div class="gain-item">
+            <div class="gain-n">04</div>
+            <div class="gain-text">O que parar de fazer</div>
+          </div>
+          <div class="gain-item">
+            <div class="gain-n">05</div>
+            <div class="gain-text">O que priorizar nos próximos 90 dias</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
 <!-- ══ POSICIONAMENTO ════════════════ -->
 <section id="pos">
@@ -1324,7 +1682,7 @@ footer{
     </div>
     <div class="diag-layout">
       <div class="diag-left">
-        <div class="diag-kicker r">Diagnose Conti</div>
+        <div class="diag-kicker r">Método Diagnose Conti™</div>
         <h2 class="diag-h2 r d1">
           O que sua marca<br>
           <em>tem e não usa</em>
@@ -1342,10 +1700,10 @@ footer{
         </div>
         <div class="price-block r d3">
           <div class="price-n">R$4.500</div>
-          <div class="price-meta">Sessão única<br>Vagas limitadas por mês</div>
+          <div class="price-meta">Sessão única. Diagnóstico completo. Direção clara.<br>Vagas limitadas por mês</div>
         </div>
         <div class="r d3" style="display:flex;gap:12px;flex-wrap:wrap">
-          <a href="https://form.respondi.app/2LccHDzU" target="_blank" class="btn-p">Agendar minha sessão</a>
+          <a href="https://form.respondi.app/2LccHDzU" target="_blank" class="btn-p">Aplique para Diagnose</a>
           <a href="#como" class="btn-g">Como funciona</a>
         </div>
       </div>
@@ -1515,6 +1873,52 @@ footer{
   </div>
 </section>
 
+<!-- ══ PRONTO PRA COMEÇAR ════════════ -->
+<section id="comeca">
+  <div class="wrap">
+    <div class="sec-head r">
+      <span class="sec-num">03.5</span>
+      <div class="sec-rule"></div>
+      <span class="sec-label">Pronto pra começar?</span>
+    </div>
+    <div class="comeca-layout">
+      <div class="comeca-left">
+        <span class="comeca-eyebrow r">Método Diagnose Conti</span>
+        <h2 class="comeca-h2 r d1">Duas horas.<br><strong>Um mapeamento.</strong><br>Uma <em>direção.</em></h2>
+        <p class="comeca-body r d2">O passo mais curto entre onde sua marca está e onde ela poderia estar. A diagnose revela o potencial que já existe — antes de qualquer mudança.</p>
+        <div class="comeca-btns r d3">
+          <a href="https://form.respondi.app/2LccHDzU" target="_blank" class="btn-p">Aplicar para diagnose</a>
+          <a href="https://wa.me/5511977079874" class="btn-g">Falar sobre um projeto</a>
+        </div>
+      </div>
+      <div class="comeca-div"></div>
+      <div class="comeca-right r d2">
+        <div class="comeca-aside-label">O que você leva da sessão</div>
+        <div class="comeca-row">
+          <div class="cr-n">01</div>
+          <div class="cr-text"><strong>O ativo oculto</strong> — o diferencial que nenhum concorrente possui nessa combinação</div>
+        </div>
+        <div class="comeca-row">
+          <div class="cr-n">02</div>
+          <div class="cr-text"><strong>A tensão central</strong> — o conflito que mantém a marca abaixo do teto</div>
+        </div>
+        <div class="comeca-row">
+          <div class="cr-n">03</div>
+          <div class="cr-text"><strong>A lacuna de mercado</strong> — o espaço disponível para ocupar com menos resistência</div>
+        </div>
+        <div class="comeca-row">
+          <div class="cr-n">04</div>
+          <div class="cr-text"><strong>O movimento prioritário</strong> — a alavanca que desbloqueará os outros</div>
+        </div>
+        <div class="comeca-row">
+          <div class="cr-n">05</div>
+          <div class="cr-text"><strong>O laudo</strong> — 12 slides com o diagnóstico completo em até 72h</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- ══ CAMINHOS ══════════════════════ -->
 <section id="caminhos">
   <div class="wrap">
@@ -1555,7 +1959,7 @@ footer{
       </div>
       <div class="cam dim r d2">
         <div class="cam-num">04 · Parceria</div>
-        <div class="cam-name">Licença <em>Diagnose</em></div>
+        <div class="cam-name">Licença <em>Diagnose Conti</em></div>
         <div class="cam-deck">Para consultores e agências que querem aplicar o método com certificação Conti.</div>
         <div class="cam-list">
           <div class="cl">Template completo + guia de aplicação</div>
@@ -1593,40 +1997,40 @@ footer{
     <div class="sec-head r">
       <span class="sec-num">05</span>
       <div class="sec-rule"></div>
-      <span class="sec-label">Pronto para começar?</span>
+      <span class="sec-label">A decisão é sua</span>
     </div>
     <div class="fim-layout">
       <div class="fim-left">
-        <span class="fim-eyebrow r">Diagnose Conti</span>
-        <h2 class="fim-h2 r d1">Duas horas.<br><strong>Um mapeamento.</strong><br>Uma direção.</h2>
-        <p class="fim-body r d2">O passo mais curto entre onde sua marca está e onde ela poderia estar. A diagnose revela o potencial que existe antes de qualquer mudança.</p>
+        <span class="fim-eyebrow r">Uma última coisa</span>
+        <h2 class="fim-h2 r d1">A marca que você<br><strong>tem hoje</strong><br>não é o <em>limite.</em></h2>
+        <p class="fim-body r d2">A maioria das marcas nunca descobre o que realmente tem. Não por falta de potencial — por falta de leitura. A Diagnose existe para mudar isso. Uma sessão. Um laudo. Uma direção que você leva para sempre.</p>
         <div class="fim-btns r d3">
-          <a href="https://form.respondi.app/2LccHDzU" target="_blank" class="btn-p">Agendar diagnose</a>
-          <a href="https://wa.me/5511977079874" class="btn-g">Falar sobre um projeto</a>
+          <a href="https://form.respondi.app/2LccHDzU" target="_blank" class="btn-p">Aplicar para Diagnose Conti</a>
+          <a href="https://wa.me/5511977079874" class="btn-g">Tenho uma dúvida antes</a>
         </div>
       </div>
       <div class="fim-div"></div>
       <div class="fim-right r d2">
-        <div class="fim-aside-label">O que você leva da sessão</div>
+        <div class="fim-aside-label">Perguntas frequentes</div>
         <div class="fim-row">
-          <div class="fr-n">01</div>
-          <div class="fr-text"><strong>O ativo oculto</strong> — o diferencial que nenhum concorrente possui nessa combinação</div>
+          <div class="fr-n">→</div>
+          <div class="fr-text"><strong>A diagnose é um produto isolado?</strong> Sim. Vale por si mesma, independente de qualquer continuidade com a Conti.</div>
         </div>
         <div class="fim-row">
-          <div class="fr-n">02</div>
-          <div class="fr-text"><strong>A tensão central</strong> — o conflito que mantém a marca abaixo do teto</div>
+          <div class="fr-n">→</div>
+          <div class="fr-text"><strong>Precisa estar em crise para contratar?</strong> Não. A maioria dos clientes está bem — e quer entender como ir além do teto atual.</div>
         </div>
         <div class="fim-row">
-          <div class="fr-n">03</div>
-          <div class="fr-text"><strong>A lacuna de mercado</strong> — o espaço disponível para ocupar com menos resistência</div>
+          <div class="fr-n">→</div>
+          <div class="fr-text"><strong>E se minha marca for pequena?</strong> Tamanho não é critério. O que importa é ter algo real para ler — e vontade de agir com o que for encontrado.</div>
         </div>
         <div class="fim-row">
-          <div class="fr-n">04</div>
-          <div class="fr-text"><strong>O movimento prioritário</strong> — a alavanca que desbloqueará os outros</div>
+          <div class="fr-n">→</div>
+          <div class="fr-text"><strong>Quantas vagas por mês?</strong> Limitadas. A sessão exige presença total — por isso não abrimos mais do que a capacidade real de entrega.</div>
         </div>
         <div class="fim-row">
-          <div class="fr-n">05</div>
-          <div class="fr-text"><strong>O laudo</strong> — 12 slides com o diagnóstico completo em até 72h</div>
+          <div class="fr-n">→</div>
+          <div class="fr-text"><strong>Como funciona o pagamento?</strong> Integral no agendamento. Após a confirmação, o briefing de pré-sessão é enviado em até 24h.</div>
         </div>
       </div>
     </div>
@@ -1649,16 +2053,23 @@ footer{
     <div class="ft-div"></div>
     <div class="ft-cell">
       <span class="ft-label">Contato</span>
-      <p class="ft-text">contato.conticuradoria@gmail.com<br>Minas Gerais · Brasil</p>
+      <p class="ft-text"><a id="email-link" style="color:var(--warm);text-decoration:none"></a>
+<script>
+  const u = 'contato.conticuradoria';
+  const d = 'gmail.com';
+  const el = document.getElementById('email-link');
+  el.href = 'mailto:' + u + '@' + d;
+  el.textContent = u + '@' + d;
+</script><br>Minas Gerais · Brasil</p>
     </div>
   </div>
   <div class="footer-bottom">
-    <span class="fb-copy">© 2025 Conti · Todos os direitos reservados</span>
+    <span class="fb-copy">© 2025 Conti Curadoria · Todos os direitos reservados</span>
     <span class="fb-copy">Estratégia e Arquitetura de Marcas</span>
   </div>
 </footer>
 
-<script>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
 const c=document.getElementById('c'),cr=document.getElementById('cr');
 let mx=0,my=0,rx=0,ry=0;
 document.addEventListener('mousemove',e=>{
@@ -1695,11 +2106,12 @@ document.querySelectorAll('a[href^="#"]').forEach(a=>{
 });
 
 document.querySelector('.email-btn').addEventListener('click',()=>{
-  const i=document.querySelector('.email-in');
-  if(i.value.includes('@')){
-    i.value='';i.placeholder='Anotado. Até breve.';
-    setTimeout(()=>i.placeholder='seu@email.com',3000);
-  }
+  const inp=document.querySelector('.email-in');
+  const val=inp.value.trim();
+  if(!val||!val.includes('@'))return;
+  inp.value='';
+  inp.placeholder='Obrigado!';
+  setTimeout(()=>{inp.placeholder='seu@email.com';},3000);
 });
 </script>
 </body>
